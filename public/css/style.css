@@ -1,0 +1,85 @@
+/******* 基礎 *******/
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    padding-top: 50px;
+}
+
+/******* ヘッダー *******/
+
+header {
+    width: 100%;
+    background-color: #B2D8BB;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/******* コンテナ *******/
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start; /* 子要素を上端に揃える */
+    padding-top: 80px;
+    margin: 20px;
+    max-width: 1200px; /* コンテナの最大幅 */
+}
+
+.container > div {
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+
+/******* ボタン *******/
+
+input[type="number"], button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #B2D8BB;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px; /* ボタンの上部余白を少し広げる */
+}
+
+button:hover {
+    background-color: #D8B2CF;
+}
+
+
+/******* レスポンシブ *******/
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container > div {
+        flex-basis: 100%; /* スマートフォン表示では幅を100%にする */
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>編み物計算フォーム</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>編み物計算ツール</h1>
+    </header>
+    <div class="container">
+        <div>
+            <h2>ゲージ（10*10 cm）</h2>
+            <label for="gauge-stitches">目数</label>
+            <input type="number" step="0.1" id="gauge-stitches" name="gauge-stitches" required><br>
+            <label for="gauge-rows">段数</label>
+            <input type="number" step="0.1" id="gauge-rows" name="gauge-rows" required><br>
+
+            <h2>標準状態重量</h2>
+                <label for="weight-g">重さ（g）</label>
+                <input type="number" step="0.1" id="weight-g" name="weight-g" step="any" required><br>
+                <label for="length-m">長さ（m）</label>
+                <input type="number" step="0.1" id="length-m" name="length-m" step="any" required><br>
+
+            <h2>編みたい寸法（cm）</h2>
+            <label for="desired-width">横（目数方向）</label>
+            <input type="number" step="0.1" id="desired-width" name="desired-width" step="any" required>
+            <label for="desired-height">縦（段数方向）</label>
+            <input type="number" step="0.1" id="desired-height" name="desired-height" step="any" required>
+
+            <button type="submit" id="calculate">計算</button>
+        </div>
+        <div class="result">
+            <h2>結果</h2>
+            <label for="result-stitches">必要な目数</label>
+            <input type="number" step="0.1" id="result-stitches" name="result-stitches" readonly><br>
+            <label for="result-rows">必要な段数</label>
+            <input type="number" step="0.1" id="result-rows" name="result-rows" readonly><br>
+            <label for="result-weight">必要な重さ（g）</label>
+            <input type="number" step="0.1" id="result-weight" name="result-weight" readonly><br>
+            <label for="result-length">必要な長さ（m）</label>
+            <input type="number" step="0.1" id="result-length" name="result-length" readonly><br>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
