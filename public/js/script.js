@@ -25,12 +25,12 @@ function calculateResults() {
 
     const perMeterWeightG = weightG / lengthM;
     const totalWeightG = perMeterWeightG * totalLengthM;
+    const totalBallOfYarn = totalWeightG / weightG;
 
     // 結果を表示（小数点第二位まで丸める）
-    const resultStitchesForm = document.querySelector('#result-stitches')
-    resultStitchesForm.value = formatResult(resultStitches)
-    const resultRowsForm = document.querySelector('#result-rows')
-    resultRowsForm.value = formatResult(resultRows);
+    document.querySelector('#result-stitches').value = formatResult(resultStitches)
+    document.querySelector('#result-rows').value = formatResult(resultRows);
     document.querySelector('#result-weight').value = formatResult(totalWeightG);
     document.querySelector('#result-length').value = formatResult(totalLengthM);
+    document.querySelector('#result-ballofyarn').value = formatResult(totalBallOfYarn);
 }
